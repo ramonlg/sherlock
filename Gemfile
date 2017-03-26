@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+  source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -10,7 +10,6 @@ gem 'sqlite3'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
 
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
@@ -21,8 +20,11 @@ gem 'bootstrap-sass'
 gem 'pry-rails'
 gem 'pry-byebug'
 
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'bootstrap-datepicker-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
