@@ -5,7 +5,8 @@ class CoursesController < ApplicationController
   # GET /courses.json
   def index
     @courses = if params[:q].present? || params[:search].present? && (params[:search][:title].present? || params[:search][:category].present?)
-      ElasticSearcher.new.call(params).courses
+      # ElasticSearcher.new.call(params).courses
+      SunspotSearcher.new.call(params).courses
     else
       Course.page(params[:page] || 1).per(15).all
     end

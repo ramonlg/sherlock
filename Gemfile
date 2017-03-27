@@ -22,12 +22,17 @@ gem 'pry-byebug'
 
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
-gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
 gem 'bootstrap-datepicker-rails'
+
+gem 'sunspot_rails'
+gem 'progress_bar'
+
+# gem 'elasticsearch-model'
+# gem 'elasticsearch-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'sunspot_solr'
 end
 
 group :development do
